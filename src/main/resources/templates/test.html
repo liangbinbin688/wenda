@@ -1,0 +1,67 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" >
+  <head>
+    <title>test.html</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+
+<!-- <table class="table table-hover">
+	<thead>
+		<tr>
+			<th>姓名</th>
+			<th>班级</th>
+			<th>性别</th>
+			<th>地址</th>
+			<th>操作</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="s:${page.list}">
+			<td th:text="${s.name}+'('+${s.studentnum}+')'"></td>
+			<td th:text="${s.class_.name}"></td>
+			<td th:text="${s.sex}"></td>
+			<td th:text="${s.adress}"></td>
+			<td><a th:href="'/sport/student/edit?id='+${s.id}">查看</a>
+			<td>
+		</tr>
+	</tbody>
+</table> -->
+
+<body>
+     <table>
+      <thead>
+        <tr>
+        	<th>题目</th>
+        	<th>内容</th>
+        	<th>用户名</th>
+        	<th>用户头像url</th>
+        	<th>创建时间</th>
+        	<th>评论数量</th>
+        	
+        </tr>
+      </thead>
+      <tbody>
+      	<tr th:each="s:${vo}">
+      	   <td th:text="${s.get('question').title}"></td>
+     
+      	   <td th:text="${s.get('question').content}"></td>
+      	   
+      	   <td th:text="${s.get('user').name}"></td>
+      	   <td th:text="${s.get('user').headUrl}"></td>
+      	   <td th:text="${s.get('question').createdDate}"></td>
+      	   <td th:text="${s.get('question').commentCount}"></td>
+      	   
+      	   
+      	</tr>
+      
+      </tbody>
+      
+     </table>
+  </body>
+</html>
