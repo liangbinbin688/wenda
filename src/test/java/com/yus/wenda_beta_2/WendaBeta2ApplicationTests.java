@@ -28,6 +28,9 @@ import com.yus.wenda_beta_2.utils.JedisAdapter;
 
 import redis.clients.jedis.Jedis;
 
+/**
+ * 测试提交
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class WendaBeta2ApplicationTests {
